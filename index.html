@@ -1,1 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wedding Invitation</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="js/map.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <h1 class="site-title">結婚式のご案内</h1>
+  </header>
+
+  <main>
+    <!-- 招待メッセージ -->
+    <section class="intro">
+      <div class="container">
+        <h2>Welcome to Our Wedding</h2>
+        <p>私たちの結婚式にぜひご出席ください。以下のフォームよりご回答をお願いします。</p>
+      </div>
+    </section>
+
+    <!-- RSVP フォーム -->
+    <section class="rsvp" id="rsvp">
+      <div class="container">
+        <h2>ご出欠フォーム</h2>
+        <form id="rsvp-form" action="/api/guest" method="post">
+          <ul class="attendance-choice">
+            <li>
+              <input type="radio" name="com_0_0" value="1" id="attendance" checked>
+              <label for="attendance">出席 <span class="en_attend_decline">attend</span></label>
+            </li>
+            <li>
+              <input type="radio" name="com_0_0" value="2" id="absence">
+              <label for="absence">欠席 <span class="en_attend_decline">decline</span></label>
+            </li>
+          </ul>
+
+          <!-- 名前 -->
+          <div class="form-group">
+            <label>名前 <span class="required">*</span></label>
+            <div class="name-fields">
+              <input type="text" name="com_0_1128830" placeholder="姓">
+              <input type="text" name="com_0_1128831" placeholder="名">
+            </div>
+          </div>
+
+          <!-- かな -->
+          <div class="form-group">
+            <label>かな</label>
+            <div class="name-fields">
+              <input type="text" name="com_0_1128832" placeholder="せい">
+              <input type="text" name="com_0_1128833" placeholder="めい">
+            </div>
+          </div>
+
+          <!-- 電話番号 -->
+          <div class="form-group">
+            <label>電話番号</label>
+            <input type="text" name="com_0_1128841" placeholder="電話番号">
+          </div>
+
+          <!-- メールアドレス -->
+          <div class="form-group">
+            <label>メールアドレス <span class="required">*</span></label>
+            <input type="text" name="com_0_1128842" placeholder="メールアドレス">
+          </div>
+
+          <!-- アレルギー -->
+          <div class="form-group">
+            <label>アレルギー</label>
+            <input type="text" name="com_0_1128843" placeholder="アレルギー">
+          </div>
+
+          <!-- メッセージ -->
+          <div class="form-group">
+            <label>メッセージ</label>
+            <textarea name="com_0_1128844" rows="3" placeholder="メッセージ"></textarea>
+          </div>
+
+          <!-- 送信ボタン -->
+          <div class="form-submit">
+            <button type="button" id="submit_btn">送信</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Google Map -->
+    <section class="map">
+      <div id="map_wedding"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 Wedding Invitation</p>
+  </footer>
+</body>
+</html>
 
