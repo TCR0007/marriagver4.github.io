@@ -58,4 +58,11 @@
   background-color: #555;
   color: #fff;
   border: none;
-  bo
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.form-section button:hover {
+  background-color: #333;
+}
