@@ -1,156 +1,61 @@
-/* ------------------------------
-   Reset / Base Style
------------------------------- */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Noto Sans JP', sans-serif;
-  line-height: 1.6;
-  color: #333;
-  background-color: #fff;
-  background-image: url('../images/flower_bg.jpg');
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
-  padding: 0;
-  margin: 0;
-}
-
+/* intro部分のスタイル */
 .intro .container {
   text-align: center;
   max-width: 800px;
   margin: 0 auto;
+  padding: 1.5rem 1rem;
+}
+
+.intro h2 {
+  margin-bottom: 0.5rem;
+}
+
+.intro p {
+  margin: 0 auto 1rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* フォーム全体を整える */
+.form-section {
+  max-width: 800px;
+  margin: 2rem auto;
   padding: 2rem;
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
 }
 
-/* ------------------------------
-   Headings / Titles
------------------------------- */
-h1, h2, h3, h4, h5 {
-  font-family: 'Noto Serif JP', serif;
-  margin-bottom: 10px;
-  color: #444;
-  text-align: center;
-}
-
-h1 {
-  font-size: 2.5rem;
-}
-
-h2 {
-  font-size: 1.8rem;
-}
-
-/* ------------------------------
-   Form Design
------------------------------- */
-form {
-  background: rgba(255, 255, 255, 0.9);
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 0 12px rgba(0,0,0,0.1);
-  margin: 20px auto;
-}
-
-label {
-  display: block;
-  font-weight: 600;
-  margin-bottom: 5px;
-}
-
-input[type="text"],
-input[type="email"],
-textarea,
-select {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 1rem;
-  transition: border-color 0.3s ease;
-}
-
-input[type="text"]:focus,
-input[type="email"]:focus,
-textarea:focus {
-  border-color: #6ab7ff;
-  outline: none;
-}
-
-/* ------------------------------
-   Radio Buttons
------------------------------- */
-ul.responsive {
+/* ラジオボタンのリストが縦に並びすぎないように */
+.form-section ul {
   list-style: none;
-  display: flex;
-  gap: 10px;
-  margin-bottom: 15px;
+  padding: 0;
+  margin: 0 0 1rem 0;
 }
 
-ul.responsive li {
-  flex: 1;
+.form-section li {
+  margin-bottom: 0.5rem;
 }
 
-ul.responsive input[type="radio"] {
-  display: none;
-}
-
-ul.responsive .label {
-  display: block;
-  padding: 10px;
-  text-align: center;
-  background: #f3f3f3;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-ul.responsive input[type="radio"]:checked + .label {
-  background: #6ab7ff;
-  color: #fff;
-  border-color: #6ab7ff;
-}
-
-/* ------------------------------
-   Submit Button
------------------------------- */
-.submit_btn {
+/* 入力欄全体を整える */
+.form-section input[type="text"],
+.form-section input[type="email"],
+.form-section textarea {
   width: 100%;
-  padding: 12px;
-  background: #6ab7ff;
-  color: white;
-  font-size: 1.2rem;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+
+/* 送信ボタンを中央に */
+.form-section button {
+  display: block;
+  margin: 2rem auto 0;
+  padding: 0.75rem 2rem;
+  font-size: 1.1rem;
+  background-color: #555;
+  color: #fff;
   border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.submit_btn:hover {
-  background: #5097dd;
-}
-
-/* ------------------------------
-   Footer
------------------------------- */
-footer {
-  text-align: center;
-  padding: 20px;
-  font-size: 0.9rem;
-  color: #777;
-}
-
-footer a {
-  color: #6ab7ff;
-  text-decoration: none;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
+  bo
